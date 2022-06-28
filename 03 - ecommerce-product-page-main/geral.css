@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+@media(min-width: 1000px){
+    #area-site{
+        margin: 0 15% 0 15%;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+    
+        display: table;
+    
+        border-bottom: 1px solid hsla(217, 9%, 45%, 0.233);
+    }
+    .menu-div{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .menu-div{
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+    }
+    .menu-div ul{
+        padding-left: 0;
+    }
+    .menu{
+        display: inline-block;
+        padding-right: 20px;
+    }
+    .menu a{
+        position: relative;
+        text-decoration: none;
+    
+        font-size: 14px;
+        font-weight: bold;
+        color: hsl(219, 9%, 45%);
+    }
+    .menu a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        top: 55px;
+        left: 0;
+        background-color: hsl(26, 100%, 55%);
+        border-radius: 5px;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+    .menu a:hover{
+        color: black;
+        font-weight: bold;
+    }
+    .menu a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    .carrinho-checkout{
+        z-index: 1;
+        position: absolute;
+        opacity: 0;
+        transition: 1s all;
+    }
+    .carrinho-checkout.hide{
+        position: absolute;
+        opacity: 1 !important;
+        transition: 1s all;
+    }
+    .carrinho-checkout div{
+        position: absolute;
+        
+        background-color: white;
+        box-shadow: 0 10px 16px rgba(0, 0, 0, 0.288);
+        border-radius: 10px;
+
+        top: 15px;
+        right: calc(15% - 180px);
+        
+        width: 350px;
+        height: 250px;
+    }
+    #conteudo{
+        position: relative;
+        margin: auto;
+        width: 955px;
+        height: 550px;
+    }
+    #conteudo-proporção{
+        position: absolute;
+
+        display: table; 
+        width: 100%;
+        height: calc(100% - 30px);
+
+        margin-top: 30px;
+    }
+    .area-venda{
+        display: table-cell;
+
+        width: 42%;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #img-selecionada img{
+        width: 352px;
+        border-radius: 10px;
+        transition: 1s all;
+    }
+
+    #outras-imagens img {
+        display: inline-block;
+
+        width: 70px;
+        margin: 10px;
+        border-radius: 10px;
+
+        cursor: pointer;
+    }
+    #centralizada{
+        position: absolute;
+
+        top: calc(50% -10px);
+    }
+}

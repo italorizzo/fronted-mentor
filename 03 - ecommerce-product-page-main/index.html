@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="expecifico.css">
+  <link rel="stylesheet" href="geral.css">  
+  <script src="img-produto.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section id="img-produto">
+    <div id="centralizada">
+      <div id="img-selecionada">
+        <img id="select" src="images/image-product-1.jpg" alt="">
+      </div>
+      <div id="outras-imagens">
+        <img class="img-1" src="images/image-product-1-thumbnail.jpg" alt="">
+        <img class="img-2" src="images/image-product-2-thumbnail.jpg" alt="">
+        <img class="img-3" src="images/image-product-3-thumbnail.jpg" alt="">
+        <img class="img-4" src="images/image-product-4-thumbnail.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <section id="area-site">
+    <header>
+      <div class="menu-div" id="logo-menu">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="menu-div">
+        <ul>
+          <li id="obj1" class="menu"><a href="">Collections</a></li>
+          <li id="obj2" class="menu"><a href="">Men</a></li>
+          <li id="obj3" class="menu"><a href="">Woman</a></li>
+          <li id="obj4" class="menu"><a href="">About</a></li>
+          <li id="obj5" class="menu"><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <nav class="menu-div" id="perfil-carrinho-menu">
+        <div id="menu-carrinho">
+          <img src="images/icon-cart.svg" alt="">
+          </div>
+        </div>
+        <nav class="carrinho-checkout" id="cart-check">
+          <div>
+            <h1 id="titulo-carrinho">Cart</h1>
+            <hr>
+            <p id="itens-carrinho">Your cart is empaty.</p>
+          </div>
+          <script>
+            const carrinho = document.getElementById('menu-carrinho')
+
+            function menu(){
+              let div = document.getElementById('cart-check')
+
+              div.classList.toggle('hide');
+            }
+
+            carrinho.addEventListener('click', menu)
+          </script>
+        </nav>
+        <div id="menu-perfil">
+          <img src="images/image-avatar.png" alt="">
+        </div>
+      </nav>
+    </header>
+    <main id="conteudo">
+      <section id="conteudo-proporção">
+        <section class="area-venda" id="imagens-conteudo">
+          <div id="img-selecionada">
+            <img id="select" src="images/image-product-1.jpg" alt="">
+          </div>
+          <div id="outras-imagens">
+            <img class="img-1" src="images/image-product-1-thumbnail.jpg" alt="">
+            <img class="img-2" src="images/image-product-2-thumbnail.jpg" alt="">
+            <img class="img-3" src="images/image-product-3-thumbnail.jpg" alt="">
+            <img class="img-4" src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </section>
+        <section class="area-venda" id="informações-conteudo">
+          <h2>Sneaker Company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div>$125.00<span>50%</span></div>
+          <s>$250.00</s>
+        </section>
+      </section>
+    </main>
+  </section>
+<!--
+
+  0
+  Add to cart-->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
