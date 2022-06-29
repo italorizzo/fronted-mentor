@@ -87,3 +87,33 @@ hr{
     margin: 20px 0 20px 0;
     width: 400px;
 }
+#preço{
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#desconto{
+    font-size: 15px;
+    margin-left: 20px;
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    padding: 2px 5px 2px 5px;
+    border-radius: 5px;
+}
+s{
+    font-size: 14px;
+    display: flex;
+    color: hsl(220, 14%, 75%);
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+}
+#quantidade{
+    display: table;
+    width: 200px;
+    background-color: hsl(223, 64%, 98%);
+}
+#quantidade-indicador{
+    display: table-cell;
+    text-align: center;
+    width: 33%;
+}
