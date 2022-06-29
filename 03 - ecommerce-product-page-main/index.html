@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="expecifico.css">
   <link rel="stylesheet" href="geral.css">  
   <script src="img-produto.js" defer></script>
@@ -22,14 +22,25 @@
 <body>
   <section id="img-produto">
     <div id="centralizada">
-      <div id="img-selecionada">
-        <img id="select" src="images/image-product-1.jpg" alt="">
+      <div id="close">
+        <svg id="fechar" width="20" height="30" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="white" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="passar-img">
+        <button id="previus" class="bt-passar">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
+        <div id="img-selecionada-grande" class="img-selecionada-max">
+          <img id="select-grande" src="images/image-product-1.jpg" alt="">
+        </div>
+        <button id="next" class="bt-passar">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+        </button>
       </div>
       <div id="outras-imagens">
-        <img class="img-1" src="images/image-product-1-thumbnail.jpg" alt="">
-        <img class="img-2" src="images/image-product-2-thumbnail.jpg" alt="">
-        <img class="img-3" src="images/image-product-3-thumbnail.jpg" alt="">
-        <img class="img-4" src="images/image-product-4-thumbnail.jpg" alt="">
+        <img class="img-1-grande" id="outras-select-grande" src="images/image-product-1-thumbnail.jpg" alt="">
+        <img class="img-2-grande" src="images/image-product-2-thumbnail.jpg" alt="">
+        <img class="img-3-grande" src="images/image-product-3-thumbnail.jpg" alt="">
+        <img class="img-4-grande" src="images/image-product-4-thumbnail.jpg" alt="">
       </div>
     </div>
   </section>
@@ -78,22 +89,32 @@
     <main id="conteudo">
       <section id="conteudo-proporção">
         <section class="area-venda" id="imagens-conteudo">
-          <div id="img-selecionada">
+          <div id="img-selecionada" onclick="imgproduto()">
             <img id="select" src="images/image-product-1.jpg" alt="">
           </div>
           <div id="outras-imagens">
-            <img class="img-1" src="images/image-product-1-thumbnail.jpg" alt="">
-            <img class="img-2" src="images/image-product-2-thumbnail.jpg" alt="">
-            <img class="img-3" src="images/image-product-3-thumbnail.jpg" alt="">
-            <img class="img-4" src="images/image-product-4-thumbnail.jpg" alt="">
+            <img class="img-1" id="outras-select" onclick="img1()" src="images/image-product-1-thumbnail.jpg" alt="">
+            <img class="img-2" onclick="img2()" src="images/image-product-2-thumbnail.jpg" alt="">
+            <img class="img-3" onclick="img3()" src="images/image-product-3-thumbnail.jpg" alt="">
+            <img class="img-4" onclick="img4()" src="images/image-product-4-thumbnail.jpg" alt="">
           </div>
         </section>
         <section class="area-venda" id="informações-conteudo">
-          <h2>Sneaker Company</h2>
-          <h1>Fall Limited Edition Sneakers</h1>
-          <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <h2 id="conteudo-compania">Sneaker Company</h2>
+          <h1 id="conteudo-nomeProduto">Fall Limited Edition Sneakers</h1>
+          <p id="descrição-produto">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
           <div>$125.00<span>50%</span></div>
           <s>$250.00</s>
+          <div>
+            <div>
+              <button></button>
+              <span></span>
+              <button></button>
+            </div>
+            <div>
+              <button></button>
+            </div>
+          </div>
         </section>
       </section>
     </main>
@@ -105,7 +126,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">I__Rizzo</a>.
   </div>
 </body>
 </html>

@@ -35,7 +35,6 @@ body{
         text-decoration: none;
     
         font-size: 14px;
-        font-weight: bold;
         color: hsl(219, 9%, 45%);
     }
     .menu a::before {
@@ -78,13 +77,13 @@ body{
         
         background-color: white;
         box-shadow: 0 10px 16px rgba(0, 0, 0, 0.288);
-        border-radius: 10px;
+        border-radius: 5px;
 
         top: 15px;
         right: calc(15% - 180px);
         
-        width: 350px;
-        height: 250px;
+        width: 300px;
+        height: 200px;
     }
     #conteudo{
         position: relative;
@@ -104,16 +103,31 @@ body{
     .area-venda{
         display: table-cell;
 
-        width: 42%;
+        width: 50%;
         text-align: center;
         vertical-align: middle;
     }
-    #img-selecionada img{
+    #img-produto{
+        position: absolute;
+        margin: 0;
+        z-index: 2;
+    
+        width: 100%;
+        height: 100%;
+    
+        background-color: hsla(0, 0%, 0%, 0.74);
+    }
+    #centralizada{
+        position: absolute;
+        top: calc(50% - 250px);
+        left: calc(50% - 250px);
+        text-align: center;
+    }
+    #img-selecionada img, #img-selecionada-grande img{
         width: 352px;
         border-radius: 10px;
-        transition: 1s all;
+        cursor: pointer;
     }
-
     #outras-imagens img {
         display: inline-block;
 
@@ -123,9 +137,28 @@ body{
 
         cursor: pointer;
     }
-    #centralizada{
-        position: absolute;
-
-        top: calc(50% -10px);
+    .img-selecionada-max img{
+        width: 425px !important;
+        cursor: default !important;
+    }
+    #outras-select, #outras-select-grande{
+        border: 2px solid hsl(26, 100%, 55%) !important;
+        opacity: 0.5 !important;
+    }
+    #img-produto{
+        visibility: hidden;
+    }
+    #close{
+        cursor: pointer;
+        text-align: right;
+    }
+    #fechar:hover path{
+        fill: hsl(26, 100%, 55%);
+    }
+    #informações-conteudo{
+        vertical-align: text-top;
+        padding-top: 80px;
+        text-align: left;
+        padding-left: 20px;
     }
 }
