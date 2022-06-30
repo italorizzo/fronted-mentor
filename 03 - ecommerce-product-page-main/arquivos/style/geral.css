@@ -72,7 +72,7 @@ body{
         opacity: 1 !important;
         transition: 1s all;
     }
-    .carrinho-checkout div{
+    #checkout{
         position: absolute;
         
         background-color: white;
@@ -108,7 +108,7 @@ body{
         vertical-align: middle;
     }
     #img-produto{
-        position: absolute;
+        position: fixed;
         margin: 0;
         z-index: 2;
     

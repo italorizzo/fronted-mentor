@@ -35,6 +35,7 @@ hr{
 #itens-carrinho{
     position: absolute;
 
+    width: 100%;
     font-size: 14px;
     top: calc(50% - 5px);
     left: calc(50% - 60px);
@@ -107,13 +108,129 @@ s{
     font-weight: bold;
     padding: 10px 0 10px 0;
 }
-#quantidade{
+.quantidade{
+    margin-top: 20px;
+    border-radius: 5px;
     display: table;
-    width: 200px;
+    width: 140px;
+    height: 40px;
     background-color: hsl(223, 64%, 98%);
 }
-#quantidade-indicador{
+.quantidade-indicador{
     display: table-cell;
+    vertical-align: middle;
     text-align: center;
-    width: 33%;
+    font-weight: bold;
+}
+.bt-qnt{
+    cursor: pointer;
+    position: absolute;
+    border: 0;
+    background-color: transparent;
+}
+#bt-menos{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#bt-mais{
+    margin-top: 13px;
+    margin-left: -30px;
+}
+#bt{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 175px;
+}
+#bt-addcarrinho{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+
+    border-radius: 5px;
+    border: 0;
+
+    background-color: hsl(26, 100%, 55%);
+    box-shadow: 0 10px 20px hsla(26, 100%, 55%, 0.541);
+
+    cursor: pointer;
+}
+#bt-addcarrinho span{
+    position: absolute;
+
+    top: calc(50% - 6px);
+    left: calc(50% - 20px);
+
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+}
+#bt-addcarrinho svg{
+    position: absolute;
+
+    top: calc(50% - 10px);
+    left: calc(50% - 50px);
+}
+#produtojadentro{
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+.produto{
+    margin-left: -40px;
+    padding-top: 10px;
+}
+#img-produto-checkout img{
+    position: absolute;
+    top: -30px;
+    left: -72px;
+    width: 46px;
+    border-radius: 5px;
+}
+#produto-preço-checkout{
+    position: absolute;
+    width: 200px;
+    top: -45px;
+    left: -10px;
+    color: hsl(219, 9%, 45%);
+    font-weight: lighter;
+}
+#produto-preço-checkout p{
+    margin-top: -13px;
+    font-size: 13px;
+}
+#produto-preço-checkout span{
+    font-weight: bold;
+    color: black;
+    margin-left: 5px;
+}
+#deletar-produto img{
+    position: absolute;
+    top: -15px;
+    margin-left: 210px;
+    cursor: pointer;
+}
+#finalizar-compra button{
+    position: absolute;
+    margin-top: 20px;
+    height: 45px;
+    width: 270px;
+    background-color: hsl(26, 100%, 55%);
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+#qnt-compras{
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 10px;
+    width: 15px;
+    height: 10px;
+    border-radius: 25px;
+    background-color: hsl(26, 100%, 55%);
+    visibility: hidden;
+    text-align: center;
+    font-size: 8px;
+    color: white;
 }
