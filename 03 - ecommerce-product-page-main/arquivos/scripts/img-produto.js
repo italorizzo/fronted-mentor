@@ -170,7 +170,7 @@ function img4pequeno(){
 </div>`
 }
 
-var cont1 = 0
+var cont1 = 1
 
 next2.addEventListener('click', () => {
   cont1 += 1
