@@ -3,6 +3,10 @@ const img_1 = document.querySelector('.img-1')
 const img_2 = document.querySelector('.img-2')
 const img_3 = document.querySelector('.img-3')
 const img_4 = document.querySelector('.img-4')
+const carrinho = document.getElementById('menu-carrinho')
+const next2 = document.getElementById ('next2')
+const previus2 = document.getElementById('previus2')
+const img_produto = document.getElementById('img-produto')
 
 function img1(){
     select.innerHTML = `<div id="img-selecionada" onclick="imgproduto()">
@@ -40,9 +44,6 @@ function img4(){
     img_3.removeAttribute('id')
     img_4.setAttribute('id', 'outras-select')
 }
-
-
-const img_produto = document.getElementById('img-produto')
 function imgproduto(){
     img_1.removeAttribute('id')
     img_2.removeAttribute('id')
@@ -129,4 +130,68 @@ function imgproduto(){
         img_produto.style.visibility = 'hidden'
     })
 }
+function menu(){
+  const div = document.getElementById('cart-check')
 
+  div.classList.toggle('hide');
+  sumir()
+}
+function sumir(){
+    const classes = document.getElementById('cart-check').className;
+    if (window.screen.width < 884){
+      if (classes.indexOf('hide') !== -1){
+        next2.style.zIndex = 0
+        previus2.style.zIndex = 0
+      }else{
+        next2.style.zIndex = 1
+        previus2.style.zIndex = 1
+      }
+    }
+}
+
+function img1pequeno(){
+  select.innerHTML = `            <div id="img-selecionada" onclick="imgproduto()">
+<img id="select" src="images/image-product-1.jpg" alt="">
+</div>`
+}
+function img2pequeno(){
+  select.innerHTML = `            <div id="img-selecionada" onclick="imgproduto()">
+<img id="select" src="images/image-product-2.jpg" alt="">
+</div>`
+}
+function img3pequeno(){
+  select.innerHTML = `            <div id="img-selecionada" onclick="imgproduto()">
+<img id="select" src="images/image-product-3.jpg" alt="">
+</div>`
+}
+function img4pequeno(){
+  select.innerHTML = `            <div id="img-selecionada" onclick="imgproduto()">
+<img id="select" src="images/image-product-4.jpg" alt="">
+</div>`
+}
+
+var cont1 = 0
+
+next2.addEventListener('click', () => {
+  cont1 += 1
+  nextorpreviusImg2()
+})
+previus2.addEventListener('click', () => {
+  cont1 -= 1
+  nextorpreviusImg2()
+})
+
+function nextorpreviusImg2(){
+  if (cont1 == 1){
+    img1pequeno()
+  }else if(cont1 == 2){
+    img2pequeno()
+  }else if(cont1 == 3){
+    img3pequeno()
+  }else if (cont1 == 4){
+    img4pequeno()
+  } else{
+    cont1 = 0
+  }
+}
+carrinho.addEventListener('click', menu)

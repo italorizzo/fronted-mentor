@@ -37,8 +37,9 @@ function produtosCarrinho(){
   const deletar_produto = document.getElementById('deletar-produto')
   deletar_produto.addEventListener('click', () => {
     itens_carrinho.innerHTML = `<span id="itens-carrinho">Your cart is empaty.</span>`
-    itens_carrinho.style.left = 'calc(50% - 150px)'
+    itens_carrinho.style.left = 'calc(50% - 100px)'
     itens_carrinho.style.top = 'calc(52%)'
+    itens_carrinho.style.width = '200px'
     cont = 0
     qnt_compras.style.visibility = 'hidden'
   })

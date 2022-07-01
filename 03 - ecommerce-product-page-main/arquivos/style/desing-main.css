@@ -130,10 +130,10 @@ s{
     vertical-align: middle;
     margin: auto;
 }
-#next{
+.next{
     right: -30px;
 }
-#previus{
+.previus{
     left: -30px;
 }
 @media(min-width: 884px){
@@ -242,11 +242,42 @@ s{
     .bt-passar{
         visibility: visible !important;
     }
-    #next{
+    .next{
         right: 15px !important;
     }
-    #previus{
+    .previus{
         left: 15px !important;
+    }
+
+    #conteudo-compania{
+        margin-top: 20px;
+        font-size: 10px;
+    }
+    #conteudo-nomeProduto{
+        font-size: 24px;
+    }
+    #descrição-produto{
+        font-size: 14px;
+        width: auto;
+    }
+    #preço{
+        font-size: 20px;
+    }
+    #desconto{
+        font-size: 12px;
+    }
+    s{
+        position: absolute;
+        font-size: 13px;
+        right: 50px;
+        margin-top: -30px;
+    }
+    #informações-conteudo{
+        margin: auto;
+        width: 80%;
+    }
+    .attribution{
+        bottom: -250px;
     }
 }
 @media(max-width: 470px) {
@@ -255,5 +286,25 @@ s{
     }
     .bt-passar{
         top: 200px;
+    }
+    #qnt{
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    #bt{
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+    #bt-addcarrinho{
+        width: 100%;
+    }
+    #add-carrinho{
+        padding-top: 20px;
     }
 }
